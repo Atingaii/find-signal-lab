@@ -1,0 +1,9 @@
+akshare>=1.18.40
+fastapi>=0.116.0
+numpy>=2.2.0
+pandas>=2.2.0
+PyYAML>=6.0.2
+streamlit>=1.44.0
+tushare>=1.4.24
+uvicorn>=0.35.0
+scikit-learn>=1.6.0

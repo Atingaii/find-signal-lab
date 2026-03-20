@@ -1,0 +1,1646 @@
+[
+  {
+    "target_name": "future_5d_up",
+    "model_name": "naive_signal",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.518519,
+          "precision": 0.651934,
+          "recall": 0.59596,
+          "f1": 0.622691,
+          "auc": 0.503775,
+          "top_k_hit_rate": 0.716049,
+          "rank_ic": 0.175084,
+          "grouped_return_spread": 0.010342
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.021862,
+          "top_bottom_mean_spread": 0.010342,
+          "top_k_max_drawdown": -0.245949,
+          "top_bottom_max_drawdown": -0.364891
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.611111,
+            "precision": 0.775,
+            "recall": 0.72093,
+            "f1": 0.746988,
+            "auc": 0.422833,
+            "top_k_hit_rate": 0.796296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.592593,
+            "precision": 0.75,
+            "recall": 0.714286,
+            "f1": 0.731707,
+            "auc": 0.40873,
+            "top_k_hit_rate": 0.777778,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.546296,
+            "precision": 0.698413,
+            "recall": 0.594595,
+            "f1": 0.642336,
+            "auc": 0.538553,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": -0.222222,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.407407,
+            "precision": 0.571429,
+            "recall": 0.540541,
+            "f1": 0.555556,
+            "auc": 0.332273,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.702703,
+            "recall": 0.666667,
+            "f1": 0.684211,
+            "auc": 0.454701,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.5,
+            "precision": 0.685714,
+            "recall": 0.6,
+            "f1": 0.64,
+            "auc": 0.357143,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.428571,
+            "recall": 0.391304,
+            "f1": 0.409091,
+            "auc": 0.532959,
+            "top_k_hit_rate": 0.425926,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.428571,
+            "recall": 0.409091,
+            "f1": 0.418605,
+            "auc": 0.603693,
+            "top_k_hit_rate": 0.407407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 0.545455,
+            "recall": 0.473684,
+            "f1": 0.507042,
+            "auc": 0.240132,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.675676,
+            "recall": 0.657895,
+            "f1": 0.666667,
+            "auc": 0.450658,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.469697,
+          "precision": 0.585284,
+          "recall": 0.478142,
+          "f1": 0.526316,
+          "auc": 0.462701,
+          "top_k_hit_rate": 0.635802,
+          "rank_ic": 0.115993,
+          "grouped_return_spread": 0.0057
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.009681,
+          "top_bottom_mean_spread": 0.0057,
+          "top_k_max_drawdown": -0.139028,
+          "top_bottom_max_drawdown": -0.146619
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.551724,
+            "recall": 0.516129,
+            "f1": 0.533333,
+            "auc": 0.430575,
+            "top_k_hit_rate": 0.574074,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.551724,
+            "recall": 0.5,
+            "f1": 0.52459,
+            "auc": 0.399148,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.425926,
+            "precision": 0.634921,
+            "recall": 0.506329,
+            "f1": 0.56338,
+            "auc": 0.364906,
+            "top_k_hit_rate": 0.731481,
+            "rank_ic": -0.185185,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.541667,
+            "recall": 0.433333,
+            "f1": 0.481481,
+            "auc": 0.456944,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.756757,
+            "recall": 0.636364,
+            "f1": 0.691358,
+            "auc": 0.379545,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.407407,
+            "precision": 0.625,
+            "recall": 0.5,
+            "f1": 0.555556,
+            "auc": 0.401786,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.55,
+            "recall": 0.392857,
+            "f1": 0.458333,
+            "auc": 0.506868,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.307692,
+            "recall": 0.222222,
+            "f1": 0.258065,
+            "auc": 0.521605,
+            "top_k_hit_rate": 0.333333,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.388889,
+            "precision": 0.315789,
+            "recall": 0.230769,
+            "f1": 0.266667,
+            "auc": 0.398352,
+            "top_k_hit_rate": 0.481481,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.636364,
+            "recall": 0.552632,
+            "f1": 0.591549,
+            "auc": 0.434211,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "target_name": "future_5d_up",
+    "model_name": "rule_baseline",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.557239,
+          "precision": 0.687324,
+          "recall": 0.616162,
+          "f1": 0.6498,
+          "auc": 0.527331,
+          "top_k_hit_rate": 0.722222,
+          "rank_ic": 0.062795,
+          "grouped_return_spread": 0.003821
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.019572,
+          "top_bottom_mean_spread": 0.003821,
+          "top_k_max_drawdown": -0.125801,
+          "top_bottom_max_drawdown": -0.389008
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.764706,
+            "recall": 0.604651,
+            "f1": 0.675325,
+            "auc": 0.450317,
+            "top_k_hit_rate": 0.796296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.735294,
+            "recall": 0.595238,
+            "f1": 0.657895,
+            "auc": 0.450397,
+            "top_k_hit_rate": 0.777778,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.537037,
+            "precision": 0.714286,
+            "recall": 0.540541,
+            "f1": 0.615385,
+            "auc": 0.550079,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": -0.222222,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.611111,
+            "precision": 0.710526,
+            "recall": 0.72973,
+            "f1": 0.72,
+            "auc": 0.492846,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.714286,
+            "recall": 0.641026,
+            "f1": 0.675676,
+            "auc": 0.464957,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.710526,
+            "recall": 0.675,
+            "f1": 0.692308,
+            "auc": 0.405357,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.592593,
+            "precision": 0.521739,
+            "recall": 0.521739,
+            "f1": 0.521739,
+            "auc": 0.586255,
+            "top_k_hit_rate": 0.425926,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.44,
+            "recall": 0.5,
+            "f1": 0.468085,
+            "auc": 0.582386,
+            "top_k_hit_rate": 0.407407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.692308,
+            "recall": 0.710526,
+            "f1": 0.701299,
+            "auc": 0.427632,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.727273,
+            "recall": 0.631579,
+            "f1": 0.676056,
+            "auc": 0.495066,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.513468,
+          "precision": 0.584615,
+          "recall": 0.726776,
+          "f1": 0.64799,
+          "auc": 0.429345,
+          "top_k_hit_rate": 0.635802,
+          "rank_ic": 0.019865,
+          "grouped_return_spread": 0.001998
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.007614,
+          "top_bottom_mean_spread": 0.001998,
+          "top_k_max_drawdown": -0.1455,
+          "top_bottom_max_drawdown": -0.161054
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.407407,
+            "precision": 0.487805,
+            "recall": 0.645161,
+            "f1": 0.555556,
+            "auc": 0.293128,
+            "top_k_hit_rate": 0.574074,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.407407,
+            "precision": 0.5,
+            "recall": 0.625,
+            "f1": 0.555556,
+            "auc": 0.335227,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.564815,
+            "precision": 0.686047,
+            "recall": 0.746835,
+            "f1": 0.715152,
+            "auc": 0.372326,
+            "top_k_hit_rate": 0.731481,
+            "rank_ic": -0.148148,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.522727,
+            "recall": 0.766667,
+            "f1": 0.621622,
+            "auc": 0.440278,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.611111,
+            "precision": 0.780488,
+            "recall": 0.727273,
+            "f1": 0.752941,
+            "auc": 0.334091,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.714286,
+            "recall": 0.875,
+            "f1": 0.786517,
+            "auc": 0.283929,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.567568,
+            "recall": 0.75,
+            "f1": 0.646154,
+            "auc": 0.494505,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.388889,
+            "recall": 0.777778,
+            "f1": 0.518519,
+            "auc": 0.603395,
+            "top_k_hit_rate": 0.333333,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.388889,
+            "precision": 0.425532,
+            "recall": 0.769231,
+            "f1": 0.547945,
+            "auc": 0.346154,
+            "top_k_hit_rate": 0.481481,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.647059,
+            "recall": 0.578947,
+            "f1": 0.611111,
+            "auc": 0.370066,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "target_name": "future_5d_up",
+    "model_name": "logistic_regression",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.474747,
+          "precision": 0.71875,
+          "recall": 0.348485,
+          "f1": 0.469388,
+          "auc": 0.550862,
+          "top_k_hit_rate": 0.62963,
+          "rank_ic": 0.055556,
+          "grouped_return_spread": 0.005359
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.018262,
+          "top_bottom_mean_spread": 0.005359,
+          "top_k_max_drawdown": -0.069239,
+          "top_bottom_max_drawdown": -0.307601
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 0.833333,
+            "recall": 0.232558,
+            "f1": 0.363636,
+            "auc": 0.59408,
+            "top_k_hit_rate": 0.796296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.425926,
+            "precision": 0.866667,
+            "recall": 0.309524,
+            "f1": 0.45614,
+            "auc": 0.615079,
+            "top_k_hit_rate": 0.777778,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.62037,
+            "precision": 0.836735,
+            "recall": 0.554054,
+            "f1": 0.666667,
+            "auc": 0.613672,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": 0.37037,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.388889,
+            "precision": 0.833333,
+            "recall": 0.135135,
+            "f1": 0.232558,
+            "auc": 0.608903,
+            "top_k_hit_rate": 0.685185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.826087,
+            "recall": 0.487179,
+            "f1": 0.612903,
+            "auc": 0.705983,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 0.777778,
+            "recall": 0.175,
+            "f1": 0.285714,
+            "auc": 0.678571,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.444444,
+            "precision": 0.347826,
+            "recall": 0.347826,
+            "f1": 0.347826,
+            "auc": 0.431978,
+            "top_k_hit_rate": 0.425926,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.421053,
+            "recall": 0.363636,
+            "f1": 0.390244,
+            "auc": 0.556818,
+            "top_k_hit_rate": 0.407407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 0.714286,
+            "recall": 0.131579,
+            "f1": 0.222222,
+            "auc": 0.527961,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.758621,
+            "recall": 0.578947,
+            "f1": 0.656716,
+            "auc": 0.618421,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.515152,
+          "precision": 0.616766,
+          "recall": 0.562842,
+          "f1": 0.588571,
+          "auc": 0.525225,
+          "top_k_hit_rate": 0.641975,
+          "rank_ic": 0.072559,
+          "grouped_return_spread": 0.001663
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.007722,
+          "top_bottom_mean_spread": 0.001663,
+          "top_k_max_drawdown": -0.077131,
+          "top_bottom_max_drawdown": -0.30687
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.425926,
+            "precision": 0.5,
+            "recall": 0.516129,
+            "f1": 0.507937,
+            "auc": 0.434783,
+            "top_k_hit_rate": 0.574074,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.5,
+            "precision": 0.571429,
+            "recall": 0.625,
+            "f1": 0.597015,
+            "auc": 0.534091,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.537037,
+            "precision": 0.730159,
+            "recall": 0.582278,
+            "f1": 0.647887,
+            "auc": 0.551724,
+            "top_k_hit_rate": 0.731481,
+            "rank_ic": -0.037037,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.516129,
+            "recall": 0.533333,
+            "f1": 0.52459,
+            "auc": 0.452778,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.425926,
+            "precision": 0.76,
+            "recall": 0.431818,
+            "f1": 0.550725,
+            "auc": 0.495455,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.8,
+            "recall": 0.4,
+            "f1": 0.533333,
+            "auc": 0.503571,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.558824,
+            "recall": 0.678571,
+            "f1": 0.612903,
+            "auc": 0.576923,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.483871,
+            "recall": 0.833333,
+            "f1": 0.612245,
+            "auc": 0.779321,
+            "top_k_hit_rate": 0.333333,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.548387,
+            "recall": 0.653846,
+            "f1": 0.596491,
+            "auc": 0.637363,
+            "top_k_hit_rate": 0.481481,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.6875,
+            "recall": 0.578947,
+            "f1": 0.628571,
+            "auc": 0.493421,
+            "top_k_hit_rate": 0.703704,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "target_name": "future_20d_relative_strength",
+    "model_name": "naive_signal",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.56734,
+          "precision": 0.620455,
+          "recall": 0.752066,
+          "f1": 0.67995,
+          "auc": 0.558644,
+          "top_k_hit_rate": 0.641975,
+          "rank_ic": 0.165488,
+          "grouped_return_spread": 0.001353
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.001231,
+          "top_bottom_mean_spread": 0.001353,
+          "top_k_max_drawdown": -0.019527,
+          "top_bottom_max_drawdown": -0.100496
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.714286,
+            "recall": 0.875,
+            "f1": 0.786517,
+            "auc": 0.396429,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.796296,
+            "precision": 0.811321,
+            "recall": 0.977273,
+            "f1": 0.886598,
+            "auc": 0.465909,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.305556,
+            "precision": 0.333333,
+            "recall": 0.388889,
+            "f1": 0.358974,
+            "auc": 0.21262,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": -0.333333,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.611111,
+            "precision": 0.571429,
+            "recall": 1.0,
+            "f1": 0.727273,
+            "auc": 0.875,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 0.62,
+            "recall": 0.96875,
+            "f1": 0.756098,
+            "auc": 0.558239,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.777778,
+            "precision": 0.857143,
+            "recall": 0.893617,
+            "f1": 0.875,
+            "auc": 0.452888,
+            "top_k_hit_rate": 0.87037,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 1.0,
+            "recall": 0.333333,
+            "f1": 0.5,
+            "auc": 0.365278,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.37037,
+            "precision": 0.1875,
+            "recall": 0.125,
+            "f1": 0.15,
+            "auc": 0.186111,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.574074,
+            "precision": 0.607843,
+            "recall": 0.911765,
+            "f1": 0.729412,
+            "auc": 0.445588,
+            "top_k_hit_rate": 0.62963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.592593,
+            "precision": 0.58,
+            "recall": 0.966667,
+            "f1": 0.725,
+            "auc": 0.559722,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.520202,
+          "precision": 0.482394,
+          "recall": 0.498182,
+          "f1": 0.490161,
+          "auc": 0.510197,
+          "top_k_hit_rate": 0.444444,
+          "rank_ic": 0.109428,
+          "grouped_return_spread": 0.001817
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": -0.000935,
+          "top_bottom_mean_spread": 0.001817,
+          "top_k_max_drawdown": -0.045073,
+          "top_bottom_max_drawdown": -0.04799
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.722222,
+            "precision": 0.886364,
+            "recall": 0.795918,
+            "f1": 0.83871,
+            "auc": 0.289796,
+            "top_k_hit_rate": 0.907407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.481481,
+            "precision": 0.634146,
+            "recall": 0.666667,
+            "f1": 0.65,
+            "auc": 0.273504,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.37963,
+            "precision": 0.396825,
+            "recall": 0.462963,
+            "f1": 0.42735,
+            "auc": 0.314472,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": -0.296296,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.740741,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.531915,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.37037,
+            "precision": 0.4375,
+            "recall": 0.466667,
+            "f1": 0.451613,
+            "auc": 0.226389,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.5,
+            "precision": 0.642857,
+            "recall": 0.692308,
+            "f1": 0.666667,
+            "auc": 0.198291,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.555556,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.021382,
+            "top_k_hit_rate": 0.296296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.309091,
+            "top_k_hit_rate": 0.185185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.666667,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.06383,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.277778,
+            "precision": 0.222222,
+            "recall": 0.25,
+            "f1": 0.235294,
+            "auc": 0.254167,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "target_name": "future_20d_relative_strength",
+    "model_name": "rule_baseline",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.592593,
+          "precision": 0.647922,
+          "recall": 0.730028,
+          "f1": 0.686528,
+          "auc": 0.600336,
+          "top_k_hit_rate": 0.679012,
+          "rank_ic": 0.191077,
+          "grouped_return_spread": 0.002496
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.001802,
+          "top_bottom_mean_spread": 0.002496,
+          "top_k_max_drawdown": -0.008481,
+          "top_bottom_max_drawdown": -0.080516
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 0.727273,
+            "recall": 0.8,
+            "f1": 0.761905,
+            "auc": 0.483929,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.722222,
+            "precision": 0.822222,
+            "recall": 0.840909,
+            "f1": 0.831461,
+            "auc": 0.543182,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.462963,
+            "precision": 0.465517,
+            "recall": 0.5,
+            "f1": 0.482143,
+            "auc": 0.442044,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": -0.518519,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.528302,
+            "recall": 1.0,
+            "f1": 0.691358,
+            "auc": 0.848901,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 0.625,
+            "recall": 0.9375,
+            "f1": 0.75,
+            "auc": 0.661932,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.740741,
+            "precision": 0.851064,
+            "recall": 0.851064,
+            "f1": 0.851064,
+            "auc": 0.440729,
+            "top_k_hit_rate": 0.87037,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 1.0,
+            "recall": 0.333333,
+            "f1": 0.5,
+            "auc": 0.481944,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.592593,
+            "precision": 0.571429,
+            "recall": 0.333333,
+            "f1": 0.421053,
+            "auc": 0.390278,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.560976,
+            "recall": 0.676471,
+            "f1": 0.613333,
+            "auc": 0.195588,
+            "top_k_hit_rate": 0.62963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.612245,
+            "recall": 1.0,
+            "f1": 0.759494,
+            "auc": 0.552778,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.491582,
+          "precision": 0.46281,
+          "recall": 0.610909,
+          "f1": 0.526646,
+          "auc": 0.492391,
+          "top_k_hit_rate": 0.444444,
+          "rank_ic": 0.06936,
+          "grouped_return_spread": 0.001276
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": -0.001531,
+          "top_bottom_mean_spread": 0.001276,
+          "top_k_max_drawdown": -0.071137,
+          "top_bottom_max_drawdown": -0.060104
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.722222,
+            "precision": 0.886364,
+            "recall": 0.795918,
+            "f1": 0.83871,
+            "auc": 0.240816,
+            "top_k_hit_rate": 0.907407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.518519,
+            "precision": 0.651163,
+            "recall": 0.717949,
+            "f1": 0.682927,
+            "auc": 0.376068,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.435185,
+            "precision": 0.45679,
+            "recall": 0.685185,
+            "f1": 0.548148,
+            "auc": 0.433471,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": -0.296296,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.519757,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.37037,
+            "precision": 0.45,
+            "recall": 0.6,
+            "f1": 0.514286,
+            "auc": 0.177778,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.7,
+            "recall": 0.897436,
+            "f1": 0.786517,
+            "auc": 0.188034,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.0,
+            "top_k_hit_rate": 0.296296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 0.083333,
+            "recall": 0.1,
+            "f1": 0.090909,
+            "auc": 0.447727,
+            "top_k_hit_rate": 0.185185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.296296,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.042553,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 0.322581,
+            "recall": 0.416667,
+            "f1": 0.363636,
+            "auc": 0.255556,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  },
+  {
+    "target_name": "future_20d_relative_strength",
+    "model_name": "logistic_regression",
+    "results": {
+      "valid": {
+        "classification": {
+          "accuracy": 0.405724,
+          "precision": 0.583333,
+          "recall": 0.096419,
+          "f1": 0.165485,
+          "auc": 0.542354,
+          "top_k_hit_rate": 0.716049,
+          "rank_ic": 0.153367,
+          "grouped_return_spread": 0.002666
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": 0.002178,
+          "top_bottom_mean_spread": 0.002666,
+          "top_k_max_drawdown": -0.005765,
+          "top_bottom_max_drawdown": -0.027441
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.277778,
+            "precision": 0.555556,
+            "recall": 0.125,
+            "f1": 0.204082,
+            "auc": 0.482143,
+            "top_k_hit_rate": 0.740741,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.388889,
+            "precision": 0.823529,
+            "recall": 0.318182,
+            "f1": 0.459016,
+            "auc": 0.561364,
+            "top_k_hit_rate": 0.814815,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.5,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.576818,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": 0.407407,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.361264,
+            "top_k_hit_rate": 0.518519,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.407407,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.403409,
+            "top_k_hit_rate": 0.592593,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.12963,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.525836,
+            "top_k_hit_rate": 0.87037,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.462963,
+            "precision": 1.0,
+            "recall": 0.033333,
+            "f1": 0.064516,
+            "auc": 0.575,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.666667,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "auc": 0.663889,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.37037,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "auc": 0.341176,
+            "top_k_hit_rate": 0.62963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.296296,
+            "precision": 0.346154,
+            "recall": 0.3,
+            "f1": 0.321429,
+            "auc": 0.3125,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      },
+      "test": {
+        "classification": {
+          "accuracy": 0.589226,
+          "precision": 0.587571,
+          "recall": 0.378182,
+          "f1": 0.460177,
+          "auc": 0.617338,
+          "top_k_hit_rate": 0.518519,
+          "rank_ic": 0.143771,
+          "grouped_return_spread": 0.00386
+        },
+        "backtest": {
+          "periods": 54.0,
+          "top_k_mean_return": -0.000364,
+          "top_bottom_mean_spread": 0.00386,
+          "top_k_max_drawdown": -0.029001,
+          "top_bottom_max_drawdown": -0.018867
+        },
+        "rows": 594,
+        "failure_samples": 20,
+        "boundary_samples": 20,
+        "by_family": {
+          "CHINEXT": {
+            "rows": 54,
+            "accuracy": 0.351852,
+            "precision": 1.0,
+            "recall": 0.285714,
+            "f1": 0.444444,
+            "auc": 0.783673,
+            "top_k_hit_rate": 0.907407,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CHINEXT50": {
+            "rows": 54,
+            "accuracy": 0.537037,
+            "precision": 1.0,
+            "recall": 0.358974,
+            "f1": 0.528302,
+            "auc": 0.871795,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI1000": {
+            "rows": 108,
+            "accuracy": 0.546296,
+            "precision": 0.571429,
+            "recall": 0.37037,
+            "f1": 0.449438,
+            "auc": 0.532236,
+            "top_k_hit_rate": 0.5,
+            "rank_ic": 0.111111,
+            "grouped_return_spread": 0.0
+          },
+          "CSI300": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.227273,
+            "recall": 0.714286,
+            "f1": 0.344828,
+            "auc": 0.735562,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSI500": {
+            "rows": 54,
+            "accuracy": 0.759259,
+            "precision": 1.0,
+            "recall": 0.566667,
+            "f1": 0.723404,
+            "auc": 0.823611,
+            "top_k_hit_rate": 0.555556,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "CSIA500": {
+            "rows": 54,
+            "accuracy": 0.5,
+            "precision": 1.0,
+            "recall": 0.307692,
+            "f1": 0.470588,
+            "auc": 0.832479,
+            "top_k_hit_rate": 0.722222,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND": {
+            "rows": 54,
+            "accuracy": 0.611111,
+            "precision": 0.352941,
+            "recall": 0.375,
+            "f1": 0.363636,
+            "auc": 0.516447,
+            "top_k_hit_rate": 0.296296,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "DIVIDEND_LOW_VOL": {
+            "rows": 54,
+            "accuracy": 0.62963,
+            "precision": 0.1875,
+            "recall": 0.3,
+            "f1": 0.230769,
+            "auc": 0.545455,
+            "top_k_hit_rate": 0.185185,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "SSE50": {
+            "rows": 54,
+            "accuracy": 0.703704,
+            "precision": 0.2,
+            "recall": 0.428571,
+            "f1": 0.272727,
+            "auc": 0.714286,
+            "top_k_hit_rate": 0.12963,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          },
+          "STAR50": {
+            "rows": 54,
+            "accuracy": 0.648148,
+            "precision": 0.666667,
+            "recall": 0.416667,
+            "f1": 0.512821,
+            "auc": 0.673611,
+            "top_k_hit_rate": 0.444444,
+            "rank_ic": null,
+            "grouped_return_spread": 0.0
+          }
+        }
+      }
+    }
+  }
+]

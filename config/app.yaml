@@ -1,0 +1,73 @@
+project:
+  name: fund-direction-predictor
+  display_name: Fund Direction Predictor
+  stage: stage-1-bootstrap
+  validated_at: 2026-03-19
+  prediction_horizons: [1, 5, 20]
+  objectives:
+    - Predict whether a listed passive fund is more likely to rise or fall over the next 1, 5, and 20 trading days.
+    - Predict whether that fund is more likely to outperform or underperform its peer group over the same horizons.
+    - Generate a concise, rule-based explanation using observable market and peer signals.
+  non_goals:
+    - full model training in stage one
+    - full backtesting in stage one
+    - full frontend implementation in stage one
+    - automated trading
+    - all active-fund coverage
+    - complex large-model integration
+
+v1_scope:
+  target_universe: domestic listed passive equity funds
+  include_types:
+    - ETF
+    - LOF
+    - index fund
+  primary_target_type: ETF
+  secondary_target_type: LOF and listed index funds that pass liquidity and history filters
+  excluded_types:
+    - active equity funds
+    - QDII funds
+    - bond funds
+    - money-market funds
+    - commodity funds
+    - REITs
+    - leveraged or inverse products
+  batch_mode: daily_after_close
+
+data_sources:
+  primary: akshare
+  secondary: tushare
+  official_validation:
+    - sse_etf_site
+    - szse_public_pages
+  rationale:
+    - AkShare is the easiest V1 path because it already wraps fund master, ETF, LOF, and index-fund data.
+    - Tushare is useful for later hardening but requires token setup and fund-endpoint points.
+    - Official exchange pages are authoritative for validation, but not ideal as the primary V1 ingestion layer.
+
+fund_universe:
+  strategy: benchmark_first
+  pool_size_target: 20-30
+  selection_rule: keep 1-2 listed funds per benchmark with the best recent liquidity
+  core_benchmarks:
+    - 上证50
+    - 沪深300
+    - 中证500
+    - 中证1000
+    - 中证A500
+    - 创业板指
+    - 创业板50
+    - 科创50
+    - 中证红利
+    - 红利低波
+  expansion_benchmarks:
+    - 证券公司
+    - 银行
+    - 半导体
+    - 新能源
+
+storage:
+  database_path: data/processed/fund_predictor.db
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed

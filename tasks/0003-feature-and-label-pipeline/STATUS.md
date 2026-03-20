@@ -1,0 +1,6 @@
+# Status
+
+- state: done
+- updated_at: 2026-03-19
+- next_action: start `0004-baseline-model`
+- blockers: none

@@ -1,0 +1,205 @@
+as_of: 2026-03-19
+description: Core V1 fund universe for stage two. ETF history is the primary listed-fund signal source. LOF and open-ended index funds provide companion NAV series.
+families:
+  - family_code: SSE50
+    benchmark_name: 上证50
+  - family_code: CSI300
+    benchmark_name: 沪深300
+  - family_code: CSI500
+    benchmark_name: 中证500
+  - family_code: CSI1000
+    benchmark_name: 中证1000
+  - family_code: CSIA500
+    benchmark_name: 中证A500
+  - family_code: CHINEXT50
+    benchmark_name: 创业板50
+  - family_code: CHINEXT
+    benchmark_name: 创业板指
+  - family_code: STAR50
+    benchmark_name: 科创50
+  - family_code: DIVIDEND
+    benchmark_name: 中证红利
+  - family_code: DIVIDEND_LOW_VOL
+    benchmark_name: 红利低波
+funds:
+  - fund_code: "510050"
+    fund_name_hint: 华夏上证50ETF
+    market_type: ETF
+    benchmark_family: SSE50
+    benchmark_name: 上证50
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: oldest_listed_representative
+  - fund_code: "502048"
+    fund_name_hint: 易方达上证50指数(LOF)A
+    market_type: LOF
+    benchmark_family: SSE50
+    benchmark_name: 上证50
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: listed_lof_companion_nav
+  - fund_code: "510300"
+    fund_name_hint: 沪深300ETF
+    market_type: ETF
+    benchmark_family: CSI300
+    benchmark_name: 沪深300
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: broad_market_core
+  - fund_code: "160807"
+    fund_name_hint: 长盛沪深300指数(LOF)A
+    market_type: LOF
+    benchmark_family: CSI300
+    benchmark_name: 沪深300
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+  - fund_code: "510500"
+    fund_name_hint: 中证500ETF
+    market_type: ETF
+    benchmark_family: CSI500
+    benchmark_name: 中证500
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: broad_market_core
+  - fund_code: "160616"
+    fund_name_hint: 鹏华中证500指数(LOF)A
+    market_type: LOF
+    benchmark_family: CSI500
+    benchmark_name: 中证500
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: passive_lof_companion
+  - fund_code: "512100"
+    fund_name_hint: 南方中证1000ETF
+    market_type: ETF
+    benchmark_family: CSI1000
+    benchmark_name: 中证1000
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: broad_market_core
+  - fund_code: "159845"
+    fund_name_hint: 华夏中证1000ETF
+    market_type: ETF
+    benchmark_family: CSI1000
+    benchmark_name: 中证1000
+    selection_bucket: reserve
+    source_priority: 2
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: second_listed_representative
+  - fund_code: "159352"
+    fund_name_hint: 南方中证A500ETF
+    market_type: ETF
+    benchmark_family: CSIA500
+    benchmark_name: 中证A500
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: current_broad_core
+  - fund_code: "023038"
+    fund_name_hint: 汇安中证A500指数A
+    market_type: INDEX
+    benchmark_family: CSIA500
+    benchmark_name: 中证A500
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+  - fund_code: "159949"
+    fund_name_hint: 华安创业板50ETF
+    market_type: ETF
+    benchmark_family: CHINEXT50
+    benchmark_name: 创业板50
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: growth_board_core
+  - fund_code: "160420"
+    fund_name_hint: 华安创业板50指数A
+    market_type: INDEX
+    benchmark_family: CHINEXT50
+    benchmark_name: 创业板50
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+  - fund_code: "159915"
+    fund_name_hint: 易方达创业板ETF
+    market_type: ETF
+    benchmark_family: CHINEXT
+    benchmark_name: 创业板指
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: growth_board_core
+  - fund_code: "160223"
+    fund_name_hint: 国泰创业板指数(LOF)A
+    market_type: LOF
+    benchmark_family: CHINEXT
+    benchmark_name: 创业板指
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: passive_lof_companion
+  - fund_code: "588000"
+    fund_name_hint: 华夏上证科创板50成份ETF
+    market_type: ETF
+    benchmark_family: STAR50
+    benchmark_name: 科创50
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: science_tech_core
+  - fund_code: "019385"
+    fund_name_hint: 东财科创50A
+    market_type: INDEX
+    benchmark_family: STAR50
+    benchmark_name: 科创50
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+  - fund_code: "510880"
+    fund_name_hint: 红利ETF
+    market_type: ETF
+    benchmark_family: DIVIDEND
+    benchmark_name: 中证红利
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: dividend_core
+  - fund_code: "090010"
+    fund_name_hint: 大成中证红利指数A
+    market_type: INDEX
+    benchmark_family: DIVIDEND
+    benchmark_name: 中证红利
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+  - fund_code: "512890"
+    fund_name_hint: 华泰柏瑞中证红利低波动ETF
+    market_type: ETF
+    benchmark_family: DIVIDEND_LOW_VOL
+    benchmark_name: 红利低波
+    selection_bucket: core
+    source_priority: 1
+    history_source: eastmoney_push2his_then_sina
+    selected_reason: low_vol_dividend_core
+  - fund_code: "022342"
+    fund_name_hint: 长盛中证红利低波动100指数A
+    market_type: INDEX
+    benchmark_family: DIVIDEND_LOW_VOL
+    benchmark_name: 红利低波
+    selection_bucket: companion
+    source_priority: 2
+    history_source: eastmoney_pingzhongdata
+    selected_reason: open_end_nav_companion
+

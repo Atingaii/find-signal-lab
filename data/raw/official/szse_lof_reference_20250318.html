@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+<!--   <title>æ·±äº¤æä¸»é¡µ</title>   -->
+<title>ä»ä¹æ¯LOFï¼æä»ä¹ç¹ç¹ï¼</title>
+<script>
+  if(location.protocol == 'https:'){
+    document.write('<link href="https://res.szse.cn/common/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />');
+  }else{
+    document.write('<link href="http://res.static.szse.cn/common/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />');
+  }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Web, 26 Feb 1997 08:21:57 GMT">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="author" content="inverstor.szse.cn">
+<meta name="description" content="æèµèæè²">
+<meta name="keywords" content="æèµèæè²,ææ,æ·±äº¤æ">
+<meta name="renderer" content="webkit">
+<meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="google" value="notranslate">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="screen-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="browermode" content="application">
+<meta name="x5-orientation" content="portrait">
+<meta name="HandheldFriendly" content="true">
+<script type="text/javascript">
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;//androidç»ç«¯
+
+	function addElementMeta(name,  content) {
+		var head = document.getElementsByTagName('head')[0];
+		var meta = document.createElement('meta');
+
+		meta.setAttribute('name', name);
+		meta.setAttribute('content', content);
+		head.appendChild(meta);
+	}
+	if(isAndroid) {
+		addElementMeta('x5-fullscreen', 'true');
+		addElementMeta('x5-page-mode', 'app');
+	}
+</script>
+<script>
+  (function () {
+    var _versionDate = new Date().getTime();
+    if (location.protocol == 'https:') {
+      var _path = 'https://res.szse.cn';
+    } else {
+      var _path = 'http://res.static.szse.cn';
+    }
+    // _path = _path.replace(".static.", ".");
+    //var _path = 'http://res.szse.cn';
+    //document.write( " <script src='" + _path + "/common/js/first.js?random=" + _versionDate + "'> <\/script> ");
+    var _host = 'http://www.szse.cn';
+    if (location.protocol == 'https:') {
+      _host = 'https://www.szse.cn';
+    }
+
+
+    var backDomain = 'http://www.sse.org.cn'
+    var reg = /([a-zA-Z0-9][-a-zA-Z0-9]{0,62})((\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+)\.?(:\d+)?/;
+    if (backDomain && window.location.host.match(reg)[2] === backDomain.match(reg)[2]) {
+      _host = 'http://www.sse.org.cn';
+      _path = 'http://res.static.sse.org.cn';
+      if (location.protocol == 'https:') {
+        _host = 'https://www.sse.org.cn';
+        _path = 'https://res.static.sse.org.cn';
+      }
+
+    }
+
+    _path = _path.replace(".static.", ".");
+
+    document.write(" <script src='" + _host + "/szsePath.js?random=" + _versionDate + "'> <\/script> "
+      + " <script src='" + _path + "/common/js/concatversion.js?random=" + _versionDate + "'> <\/script> ");
+  }());
+</script>
+
+<script>
+
+  function backDomainLinkSwitch(value, type) {
+    var _port = location.port ? (":" + location.port) : "";
+    var reg = /([a-zA-Z0-9][-a-zA-Z0-9]{0,62})((\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+)\.?(:\d+)?/;
+    var urlRegx = /(.*)(http:|https:)(\/\/)(([a-zA-Z0-9][-a-zA-Z0-9]{0,62})((\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+))\.?(:\d+)?(.*)/;
+
+    // htmlå­ç¬¦ä¸²æ¿æ¢
+    if (type == 'str') {
+      var strArr = value.split("=");
+      strArr = strArr.map(function (v) {
+        var host = reg.test(v) ? v.match(reg)[0] : null;
+        if (pathObj.szseHosts.indexOf(host) > -1) {
+          if (window.location.protocol == 'https:' && urlRegx.test(v)) {
+            v = v.replace(urlRegx, '$1https:$3$4' + _port + '$9');
+          };
+          if (pathObj.current_host === pathObj.back_host) {
+            v = v.replace(pathObj.main_host, pathObj.back_host);
+          }
+        }
+        return v
+      });
+      value = strArr.join("=");
+      return value;
+    }
+
+    // aæ ç­¾å°åæ¿æ¢
+    if (type === 'A') {
+      var eleA = document.querySelectorAll(value);
+      for (var i = 0; i < eleA.length; i++) {
+        var href = eleA[i].getAttribute("href");
+        var host = reg.test(href) ? href.match(reg)[0] : null;
+        if (href && pathObj.szseHosts.indexOf(host) > -1) {
+          if (window.location.protocol == 'https:') {
+            href = href.replace(urlRegx, '$1https:$3$4' + _port + '$9');
+          };
+          if (pathObj.current_host === pathObj.back_host) {
+            href = href.replace(pathObj.main_host, pathObj.back_host);
+          }
+          eleA[i].setAttribute('href', href);
+        }
+      }
+    }
+
+    // åé¾æ¥æ¿æ¢
+    if (type === "link") {
+      if (window.location.protocol == 'https:' && !!value) {
+        value = value.replace(urlRegx, '$1https:$3$4' + _port + '$9');
+      };
+      if (pathObj.current_host === pathObj.back_host) {
+        var host = reg.test(value) ? value.match(reg)[0] : null;
+        if (value && pathObj.szseHosts.indexOf(host) > -1) {
+          value = value.replace(pathObj.main_host, pathObj.back_host);
+        }
+      }
+      return value;
+    }
+
+    // èæ¯å¾å°åæ´æ¢
+    if (type === "background") {
+      var eleBg = document.querySelectorAll(value);
+      for (var i = 0; i < eleBg.length; i++) {
+        var href = eleBg[i].style.backgroundImage;
+        if (window.location.protocol == 'https:' && !!href) {
+          href = href.replace(urlRegx, '$1https:$3$4' + _port + '$9');
+        };
+        var host = reg.test(href) ? href.match(reg)[0] : null;
+        if (href && pathObj.szseHosts.indexOf(host) > -1) {
+          if (pathObj.current_host === pathObj.back_host) {
+            href = href.replace(pathObj.main_host, pathObj.back_host);
+          }
+          eleBg[i].style.backgroundImage = href;
+        }
+      }
+    }
+
+  }
+
+</script>
+<!-- <script src="http://res.static.szse.cn/lib/td-h5-website-sdk.js" td-appid="56FD3F8B428A47FAB9A3F2191498B29D"></script> -->
+<script>
+    addComCssFile();
+    changeVertion('/investor/common/css/common.css', 'css');
+</script>
+<script>
+        changeVertion('/modules/report/css/report.css', 'css');
+        changeVertion('/modules/aboutus_column/introduction/css/journal.css', 'css');
+    </script>
+
+   <style>
+.audio-container audio{ width:100%;}
+</style>
+</head>
+  <body class="article-body">
+   <!--[if lt IE 9]>
+	<div class="low_version">
+	 	<div class="g-container inner">
+		    <div class="tip">ç³»ç»æ£æµå°æ¨æ­£å¨ä½¿ç¨IE8ä»¥ä¸åæ ¸çæµè§å¨ï¼ä¸è½å®ç°å®ç¾ä½éªï¼è¯·åæ¶æ´æ°æµè§å¨çæ¬ï¼</div>
+		    <span class="low_close">&times;</span>
+		</div>
+	</div>
+<style type="text/css">
+.top-header-container{
+  margin-top:30px;
+}
+</style>
+    <script src="http://res.static.szse.cn/lib/ie8fix/html5shiv/3.7.3/html5shiv.min.js"></script>       
+    <script src="http://res.static.szse.cn/lib/ie8fix/Respond-master/dest/respond.min.js"> </script>
+    <script src="http://res.static.szse.cn/lib/ie8fix/es5-shim/4.2.0/es5-shim.min.js"></script>
+    <script src="http://res.static.szse.cn/lib/ie8fix/JSON/3.3.2/json3.min.js"></script>
+    <script src="http://res.static.szse.cn/lib/ie8fix/iefix/ie8fix.js"></script>
+<![endif]-->
+<div class="top-header-container clearfix  hidden-xs">
+    <div class="g-container">
+        <div class="pull-right top-menu-list-wrap">
+            <div class="top-menu-list">
+                <div class="item item-home" style="display:block;"><a class="link-home" href="/">æ·±äº¤æå®ç½</a></div>
+                <div class="item item-loginregist">
+                    <a class="link-login" href="javascript:void(0)">ä¸ªäººä¸­å¿</a>
+                    <!-- <span class="sepline">|</span>
+                    <a class="link-reg" href="/modules/regist/views/index.html">æ³¨å</a> -->
+                </div>
+                <div class="item">
+                    <div class="languageswitch">
+                        <a class="big5OrSimp" href="">ç¹ä½ä¸­æ</a>
+                    </div>
+                    <script>
+                        changeVertion('/common/js/toggleBig5.js', 'js');
+                    </script>
+                </div>
+                <div class="item item-invest-link">
+                    <a href="http://www.investor.org.cn/" target="_blank"><span class="glyphicon glyphicon-link" style="margin-right:4px; margin-left:16px; font-size:14px;"></span>ä¸­å½æèµèç½</a>
+                </div>
+
+                <!-- <div class="item">
+                    <div class="languageswitch">
+                        <a class="btn-goenglish" href="http://www.szse.cn/main/en/" target="_blank">English</a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar szse-navbar szse-navbar-pc">
+    <div class="g-container clearfix">
+        <div class="navbar-headers ">
+            <a href="/" class="navbar-brand">
+                <img class="nav-logo" src="http://res.static.szse.cn/common/icon/logo.png" alt="æ·±äº¤æ" />
+            </a>
+            <h3 class="childsite-logo-tit">
+                <a href="#" class="itemlink-investor">æèµèæè²</a><br />
+                <a href="#" class="itemlink-investor sub-title">å½å®¶çº§è¯å¸æè´§æèµèæè²åºå°</a>
+            </h3>
+        </div>
+        <div class="top-search-el">
+            <form class="search-form" action target="frameFile">
+                <input id="pcSearchInput" type="search" maxlength="100" class="search-input need-repaired-placeholder" autocomplete="off" placeholder="è¯·è¾å¥å³é®å­" />
+                <input type="text" style="display: none;" />
+                <span class="clear-keyword">&times;</span>
+                <button class="search-btn" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+            <div class="search-hot">
+            </div>
+        </div>
+
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse  navbar-wrap">
+        <div class="g-container">
+            <div class="nav-box investnav-box">
+                <script>
+                  try {
+                    navMenuAJAX('/navMenu/index.html', '/investor/navMenu/index.html', 'pcMenu', 'investor');
+                  } catch (e) { }
+                </script>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="navbar-fixed-top navmobile szse-navbar szse-navbar-mobile">
+    <div class="mobile-search">
+        <div class="mobile-search_container">
+            <div class="mobile-search_form">
+                <div class="top-search-el">
+                    <div class="search-form">
+                        <form action target="frameFile" id="searh_form">
+                            <input id="mobileSearchInput" type="search" class="mobile-search_input search-input need-repaired-placeholder" placeholder="è¯·è¾å¥å³é®å­" />
+                            <input type="text" style="display: none;" />
+                            <iframe name="frameFile" style="display: none;"></iframe>
+                        </form>
+
+
+                        <!-- <input type="button" class="search-btn" value="æç´¢" /> -->
+                    </div>
+                </div>
+                <!-- <input class="mobile-search_input" type="text" name="topbarSearch" placeholder="æç´¢è¡æ/å¬å/å¶ä»ä¿¡æ¯" /> -->
+                <img class="mobile-search_close" src="http://res.static.szse.cn/common/icon/mobile-search_close.png" alt="search close" />
+            </div>
+        </div>
+    </div>
+    <div id="dl-menu" class="dl-menuwrapper">
+        <a class="navipone_block"><span class="glyphicon glyphicon-search"></span></a>
+        <a class="navbar-brand" href="/"><img src="http://res.static.szse.cn/common/icon/logo.png" alt="æ·±äº¤æ" /></a>
+        <button class="dl-trigger dl-phmenu"></button>
+        <script>
+            try {
+              navMenuAJAX('/navMenu/index.html', '/investor/navMenu/index.html', 'mobileMenu', 'investor');
+            } catch (e) { }
+        </script>
+        <script>
+            changeVertion('/common/js/toggleBig5.js', 'js');
+        </script>
+    </div>
+</div>
+<div class="g-locationnav">
+    <div class="banner-wrap">
+      <img src="http://res.static.szse.cn/investor/common/images/investlocation-banner.jpg" />
+    </div>
+    <div class="g-container">
+      <div class="g-banner-txt">
+            <h2 class="hidden-xs">LOF</h2>
+            <p>
+              <span class="glyphicon glyphicon-map-marker"></span>ä½ç½®ï¼<a href="../../../" class="CurrChnlCls">æèµèæè²</a>/<a href="../../" class="CurrChnlCls">ç­çº¿é®ç­</a>/<a href="../" class="CurrChnlCls">åºé</a>/<a href="./" class="CurrChnlCls">LOF</a>
+            </p>
+          </div>
+    </div>
+</div>
+<div class="elevator_fix investor">
+    <div class="elevator_totop">
+        <i></i>
+        <p class="describe">è¿åé¡¶é¨</p>
+    </div>
+    <div class="elevator_survey">
+        <a class="btn-survey" href="https://survey.szse.cn/t/qqu2" target="_blank">
+            <i></i>
+            <p class="describe">æ»¡æåº¦è°æ¥</p>
+        </a>
+    </div>
+    <div class="elevator_share">
+        <i></i>
+        <div id="weixin_qrcode" class="weixin_qrcode">
+
+            <s></s>
+            <span class="describe">å¾®ä¿¡æ«ä¸æ«ï¼åäº«å¥½å</span>
+        </div>
+    </div>
+    <div class="elevator_share visit">
+        <i class="visit"></i>
+        <div id="visit_qrcode" class="weixin_qrcode visit_qrcode">
+
+            <s></s>
+            <span class="describe">åè§é¢çº¦</span>
+        </div>
+    </div>
+</div>
+   
+  
+      <div class="g-container-wrap">
+            <div class="g-container">
+<!--startprint-->
+                <div class="news-detail-con g-conbox"> 
+                    <div class="des-header">
+                        <h2 class="title">ä»ä¹æ¯LOFï¼æä»ä¹ç¹ç¹ï¼</h2>
+                        <script>
+                            var curSubTitle ='';
+                            if(curSubTitle != ''){
+                                document.write('<h4 class="sub-title text-center"><span class="">'+curSubTitle+'</span></h4>')
+                            }                       
+                        </script>
+                        <div class="time">æ¶é´ï¼<span>2016-11-23</span></div>
+                        <div class="des-switchsize">
+                          å­ä½ï¼
+                          <span class="bigger">å¤§</span>
+                          <span class="medium">ä¸­</span>
+                          <span class="smaller">å°</span>
+                        </div>                        
+                        
+            </div>
+                     <div class="des-content" id="desContent">
+                       <P style="TEXT-INDENT: 18.05pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">ç­ï¼</SPAN></B><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½" lang=EN-US>LOF</SPAN><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">ï¼<SPAN lang=EN-US>Listed Open-Ended Fund</SPAN>ï¼æ¯ä¸å¸å¼æ¾å¼åºéãä¸ä¸è¬å¼æ¾å¼åºéä¸åçæ¯ï¼<SPAN lang=EN-US>LOF</SPAN>åºéå¯ä»¥åè¡ç¥¨ä¸æ ·å¨äºçº§å¸åºä¹°åãå¶åºéä»½é¢ä½¿ç¨ç°éæç§âéé¢ç³è´­ãä»½é¢èµåâçæ¹å¼è¿è¡ç³èµã<SPAN lang=EN-US><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></SPAN></P>
+<P style="TEXT-INDENT: 18pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½" lang=EN-US>LOF</SPAN><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">ä¸»è¦æä»¥ä¸å ä¸ªç¹ç¹ï¼<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P style="TEXT-INDENT: 18pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">äº¤æä¾¿æ·ï¼æèµèå¯ä»¥å¨åä¸è´¦æ·ä¸å®ç°ææ<SPAN lang=EN-US>LOF</SPAN>çäº¤æåç³è´­èµåã<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P style="TEXT-INDENT: 18pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">è´¹ç¨ä½å»ï¼å¨äºçº§å¸åºä¹°å<SPAN lang=EN-US>LOF</SPAN>ä»½é¢çæèµææ¬å¤§å¹ä½äºåºå¤åºéçç³èµææ¬ã<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P style="TEXT-INDENT: 18pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">è§é¿éè¡é£é©ï¼å§æä¸ä¸æºæè¿è¡ä¸»å¨æè¢«å¨æèµï¼æèµèæ éæ¶å»å³æ³¨åºéæææçååªè¯å¸æåµã<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P style="TEXT-INDENT: 18pt; MARGIN: 0cm 0cm 0pt; mso-char-indent-count: 2.0" class=MsoNormal><SPAN style="FONT-FAMILY: å®ä½; FONT-SIZE: 9pt; mso-ascii-theme-font: minor-fareast; mso-fareast-theme-font: minor-fareast; mso-hansi-theme-font: minor-fareast; mso-fareast-font-family: å®ä½">æä¾æµå¨æ§ï¼<SPAN lang=EN-US>LOF</SPAN>å¨å°é­æåä¹å¯éè¿äºçº§å¸åºäº¤ææ»¡è¶³ä¸å®æµå¨æ§éæ±ï¼å¹¶ä¸åºå¤ä»½é¢å¯ä»¥éè¿è·¨ç³»ç»è½¬æç®¡å°åºååä¸äº¤æã<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P>&nbsp;</P>
+                    </div>
+                    <script>
+                        var oldCon = document.getElementById("desContent").innerHTML;
+                        oldCon = oldCon.replace(/(o:p)|(u:p)/gi,'span');
+                        oldCon = oldCon.replace(/&lt;!--\[endif\]--&gt;/g,"");
+                        document.getElementById("desContent").innerHTML = oldCon;
+                    </script>
+<!--endprint-->
+                    <div class="des-footer">
+                        <div class="article-page display-none">
+                    
+
+                        </div>
+                        <div class="article-btn">
+                            <a href="javascript:void(0);" class="btn btn-gray art-print">æå°</a>
+                            <a href="javascript:void(0);" target="_blank" class="btn btn-gray ml10 art-collect">æ¶è</a>
+                            <a href="javascript:void(0);" class="btn btn-gray ml10 art-close">å³é­</a>
+                        </div>
+                    </div>  
+                </div>
+     
+            </div>
+      </div>
+
+    <script>
+    try {
+      navMenuAJAX('/footerWrap/index.html', '/investor/footerWrap/index.html', 'footerMenu', 'investor');
+    } catch (e) {
+
+    }
+
+    addComJsFile();
+    changeVertion('/investor/common/js/common.js', 'js');
+</script>
+ 
+   <script>
+        var articleDetail = {
+            docTitle:'ä»ä¹æ¯LOFï¼æä»ä¹ç¹ç¹ï¼',
+            subDocTitle:'',
+            docAbstract:'',
+            articleId:'538832',
+            channelCode:'investFundLOFd_news',
+            channelId : '11261'
+        }
+    </script>
+    <script>
+        changeVertion('/common/js/articleDetail.js','js');
+    </script>
+  </body>
+</html>
